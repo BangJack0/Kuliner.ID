@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daftar</title>
+      <link rel="stylesheet" href="style.css" /><link />
+      <script>   
+    function validasi(form){
+        if (form.user.value == ""){
+          alert("Anda belum mengisikan Nama Depan?");
+           form.user.focus(); return (false); }
+        if (form.user2.value == ""){
+          alert("Anda belum mengisikan Nama Belakang?");
+           form.user2.focus(); return (false); }
+        if (form.email.value == ""){
+           alert("Anda belum mengisikan Email?");
+           form.email.focus(); return (false); }
+        if (form.pass.value == ""){
+          alert("Anda belum mengisikan Password?");
+           form.pass.focus(); return (false); }
+        if (form.pass2.value == ""){
+          alert("Anda belum mengisikan Retype Password?");
+           form.pass2.focus(); return (false); }
+        if (pass.value !== pass2.value){
+           alert("Password Tidak Sama"); return (false);}                  
+       return (true);
+        }
+</script>
+  </head> 
+  <body>
+    <header data-bs-theme="dark">
+      <nav>
+          <div class="wrapper">
+            <a href="index.html" title="kuliner.id">
+              <img src="logookuliner.id hitam.png" alt="google logo" width="250" >
+              <div class="menu">
+              <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="login.html" class="tbl-biru">Masuk</a></li>
+              </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+    <div class="signup-box">
+      <h1>Daftar</h1>
+      <h4>Cuma Bentar Kok</h4>
+      <form method=POST action="index.html" onSubmit="return validasi(this)">
+        <label>Nama Depan</label>
+        <input type="text" name="user" />
+        <label>Nama Belakang</label>
+        <input type="text" name="user2" />
+        <label>Email</label>
+        <input type="email" name="email" />
+        <label>Sandi</label>
+        <input type = "password"  minlength="7" maxlength="16" id = "pass" />
+        <label>Konfirmasi Sandi</label>
+        <input type = "password" minlength="7" maxlength="16" id = "pass2" />
+        <button type="submit" value="submit">SUBMIT</button></form>
+
+      <h5>Dengan mengklik tombol Daftar, Anda setuju dengan kami </h5>
+        <h6><a href="#">Syarat dan Ketentuan</a> and <a href="#">Privasi Kebijakan</a>
+      </p></h6>
+    </div>
+    <p class="ini">
+      Sudah Mempunyai Akun? <a href="login.html">Login !</a>
+    </p>
+    <p class="ini">
+      Kembali ke Halaman Utama? <a href="index.html">Home</a>
+    </p>
+  </body>
+</html>
